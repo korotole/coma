@@ -10,6 +10,8 @@ add_subdirectory(core)
 target_link_directories(${PROJECT_NAME} PRIVATE
                             "."
                             "core"
+                            "core/compression"
+                            "core/encryption"
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
