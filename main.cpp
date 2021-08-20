@@ -1,9 +1,13 @@
 #include <cstdio>
 #include <iostream>
-#include "archman.h"
+#include "CompressionManager.h"
 
 int main(int argc, char** argv) {
-    ArchMan archman = ArchMan();
-    std::cout << archman.zip(argv[1]) << std::endl;
+
+    std::cout << "Hello World!" << std::endl;
+    
+    CompressionManager coma = CompressionManager();
+    coma.zip("koko");
+
     return 0;
 }
