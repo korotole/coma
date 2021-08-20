@@ -1,1 +1,1 @@
-# archman
+# coma - compression manager
