@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/coma.dir/main.cpp.o  -o coma   -L/home/csraea/Desktop/coma/.  -L/home/csraea/Desktop/coma/core  -Wl,-rpath,/home/csraea/Desktop/coma/.:/home/csraea/Desktop/coma/core core/libCORE.a 

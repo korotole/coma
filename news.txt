@@ -1,0 +1,8 @@
+COMA (version 0.0.1)
+===============================================================================
+  * Added [COMA-1] Create & initialize a build system of a project (step 1)
+          - CMake build system added to the project
+          - CMakeLists.txt files are filled
+          - Project structure updated
+          - build.sh script added to build project conveniently
+
