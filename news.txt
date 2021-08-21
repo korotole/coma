@@ -1,5 +1,9 @@
 COMA (version 0.0.1)
 ===============================================================================
+  * Added [COMA-3] Add memory leaks checking {2}
+          - run.sh updated in order to display number of errors after the
+            execution if they are present
+          - build.sh updated to print in bold font
   * Added [COMA-3] Add memory leaks checking {1}
           - build.sh updated
           - Valgrind support

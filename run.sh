@@ -4,3 +4,12 @@ valgrind --leak-check=full \
          --verbose \
          --log-file=./out/valgrind-out.txt \
          ./out/coma ./out/test
+
+BOLD=`tput bold`
+
+ERRORS=$(grep -Po -m 1 "ERROR SUMMARY: \d+" ./out/valgrind-out.txt)
+SUCCESS=$(grep -Po -m 1 "\d+" <<< "${ERRORS}")
+
+if [[ ${SUCCESS} != 0 ]]; then
+    echo ${BOLD}${ERRORS}
+fi
