@@ -1,5 +1,13 @@
 COMA (version 0.0.1)
 ===============================================================================
+  * Added [COMA-3] Add memory leaks checking {1}
+          - build.sh updated
+          - Valgrind support
+          - added new script run.sh which executes the program with standard 
+            number of arguments (as for now) and runs valrgind
+          - Valgrind report is generated into the build folder
+  * Changed [COMA-1] Create & initialize a build system of a project (step 2)
+          - Project structure updated
   * Added [COMA-1] Create & initialize a build system of a project (step 2)
           - CMakeLists.txt updated
   * Added [COMA-1] Create & initialize a build system of a project (step 1)

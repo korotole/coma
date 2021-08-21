@@ -3,7 +3,8 @@
 cmake -S . -B ./out/build/
 CMAKE=$?
 
-if [[ ${CMAKE} != 0 ]]; then 
+if [[ ${CMAKE} != 0 ]]; then
+    printf "\n"
     echo "ERROR:  cmake"
     exit 1
 fi
@@ -11,7 +12,8 @@ fi
 make -C ./out/build/
 MAKE=$?
 if [[ ${MAKE} != 0 ]]; then 
-    echo "ERROR:  make failed"
+    printf "\n"
+    echo "ERROR:  make"
     exit 2
 fi
 

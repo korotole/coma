@@ -6,8 +6,8 @@ int main(int argc, char** argv) {
 
     std::cout << "Hello World!" << std::endl;
     
-    CompressionManager coma = CompressionManager();
-    coma.zip("koko");
+    CompressionManager coma = CompressionManager(argv[1]);
+    coma.compress();
 
     return 0;
 }

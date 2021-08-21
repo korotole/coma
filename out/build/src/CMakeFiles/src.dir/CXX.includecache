@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/csraea/Desktop/coma/src/ArgParser.cpp
-
 /home/csraea/Desktop/coma/src/CompressionManager.cpp
 CompressionManager.h
 /home/csraea/Desktop/coma/src/CompressionManager.h
@@ -18,6 +16,8 @@ cstdlib
 stdint.h
 -
 string
+-
+string.h
 -
 vector
 -
@@ -33,14 +33,12 @@ iostream
 -
 fcntl.h
 -
+datatypes.h
+/home/csraea/Desktop/coma/src/datatypes.h
 
-/home/csraea/Desktop/coma/src/DirFileManager.cpp
-
-/home/csraea/Desktop/coma/src/ExecutionController.cpp
-
-/home/csraea/Desktop/coma/src/SecurityManager.cpp
-
-/home/csraea/Desktop/coma/src/compression/huffman.cpp
+/home/csraea/Desktop/coma/src/datatypes.h
+stdint.h
+-
 
 /home/csraea/Desktop/coma/src/main.cpp
 cstdio

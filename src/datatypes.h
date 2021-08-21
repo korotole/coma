@@ -6,11 +6,12 @@ typedef struct node {
     void* right;
 } Node;
 
-enum class algorithms {
+enum class COMPRESSION {
     HUFFMAN
 };
 
 enum RETURN_VALUES {
     SUCCESS = 0,
-    STAT
+    STAT,
+    READ
 };
