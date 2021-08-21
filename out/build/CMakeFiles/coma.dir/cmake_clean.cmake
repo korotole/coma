@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/coma.dir/main.cpp.o"
+  "CMakeFiles/coma.dir/src/main.cpp.o"
   "coma"
   "coma.pdb"
 )

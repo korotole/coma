@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/csraea/Desktop/coma/. -I/home/csraea/Desktop/coma/conf -I/home/csraea/Desktop/coma/core -I/home/csraea/Desktop/coma/core/compression -I/home/csraea/Desktop/coma/core/encryption 
+CXX_INCLUDES = -I/home/csraea/Desktop/coma/conf -I/home/csraea/Desktop/coma/src -I/home/csraea/Desktop/coma/src/compression -I/home/csraea/Desktop/coma/src/encryption 
 

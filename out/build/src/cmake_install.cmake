@@ -1,4 +1,4 @@
-# Install script for directory: /home/csraea/Desktop/coma/core
+# Install script for directory: /home/csraea/Desktop/coma/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

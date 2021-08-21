@@ -1,3 +1,3 @@
 file(GLOB_RECURSE SOURCES "*.c*")
 
-add_library(CORE ${SOURCES})
+add_library(src ${SOURCES})

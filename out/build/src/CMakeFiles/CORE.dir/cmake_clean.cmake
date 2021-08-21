@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/CORE.dir/ExecutionController.cpp.o"
   "CMakeFiles/CORE.dir/SecurityManager.cpp.o"
   "CMakeFiles/CORE.dir/compression/huffman.cpp.o"
+  "CMakeFiles/CORE.dir/main.cpp.o"
   "libCORE.a"
   "libCORE.pdb"
 )

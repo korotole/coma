@@ -57,29 +57,29 @@ include CMakeFiles/coma.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/coma.dir/flags.make
 
-CMakeFiles/coma.dir/main.cpp.o: CMakeFiles/coma.dir/flags.make
-CMakeFiles/coma.dir/main.cpp.o: ../../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/coma.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/coma.dir/main.cpp.o -c /home/csraea/Desktop/coma/main.cpp
+CMakeFiles/coma.dir/src/main.cpp.o: CMakeFiles/coma.dir/flags.make
+CMakeFiles/coma.dir/src/main.cpp.o: ../../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/coma.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/coma.dir/src/main.cpp.o -c /home/csraea/Desktop/coma/src/main.cpp
 
-CMakeFiles/coma.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/coma.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/main.cpp > CMakeFiles/coma.dir/main.cpp.i
+CMakeFiles/coma.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/coma.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/src/main.cpp > CMakeFiles/coma.dir/src/main.cpp.i
 
-CMakeFiles/coma.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/coma.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/main.cpp -o CMakeFiles/coma.dir/main.cpp.s
+CMakeFiles/coma.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/coma.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/main.cpp -o CMakeFiles/coma.dir/src/main.cpp.s
 
 # Object files for target coma
 coma_OBJECTS = \
-"CMakeFiles/coma.dir/main.cpp.o"
+"CMakeFiles/coma.dir/src/main.cpp.o"
 
 # External object files for target coma
 coma_EXTERNAL_OBJECTS =
 
-coma: CMakeFiles/coma.dir/main.cpp.o
+coma: CMakeFiles/coma.dir/src/main.cpp.o
 coma: CMakeFiles/coma.dir/build.make
-coma: core/libCORE.a
+coma: src/libsrc.a
 coma: CMakeFiles/coma.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable coma"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/coma.dir/link.txt --verbose=$(VERBOSE)
