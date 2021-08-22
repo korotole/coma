@@ -9,7 +9,6 @@ uint8_t CompressionManager::Initialize(char* filename) {
     this->file = (char *) calloc(1, strlen(filename)+1);
     strcpy(this->file, filename);
 
-    compressor = new huffman::Huffman();
 }
 
 uint32_t CompressionManager::Compress(){
@@ -18,6 +17,7 @@ uint32_t CompressionManager::Compress(){
         ManageFileStream(i);
     }
 
+    compressor = new huffman::Huffman(this->fds[0]);
     this->compressor->Compress(NULL);
 
     for(int32_t i = 0; i < this->fdnum; i++) {
@@ -35,7 +35,7 @@ uint8_t CompressionManager::ManageFileStream(int32_t fd){
         struct stat sb;
         if ( stat(this->file, &sb ) == -1) {
             perror("stat");
-            return STAT;
+            return E_STAT;
         }
 
         // save the size of a file
@@ -45,7 +45,7 @@ uint8_t CompressionManager::ManageFileStream(int32_t fd){
         this->fds[fd] = open64(this->file, O_RDONLY);
         if( this->fds[fd] == -1){
             perror("open");
-            return OPEN;
+            return E_OPEN;
         }
 
     } else {

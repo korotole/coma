@@ -1,3 +1,6 @@
+#ifndef COMPRESSIONMANAGER_H 
+#define COMPRESSIONMANAGER_H
+
 #include <cstdlib>
 #include <stdint.h>
 #include <string>
@@ -13,9 +16,6 @@
 
 #include "compression/Huffman.h"
 
-#include "datatypes.h"
-
-
 class CompressionManager {
     private:
         char *file;
@@ -30,7 +30,7 @@ class CompressionManager {
         CompressionManager(char* filename){ 
             
             Initialize(filename);
-            
+
         };
         
         uint32_t Compress();
@@ -47,3 +47,5 @@ class CompressionManager {
         uint8_t ManageFileStream(int32_t fd);
         
 };
+
+#endif

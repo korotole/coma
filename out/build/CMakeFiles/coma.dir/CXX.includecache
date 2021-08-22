@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/csraea/Desktop/coma/conf/conf.h
+
 /home/csraea/Desktop/coma/src/CompressionManager.h
 cstdlib
 -
@@ -33,8 +35,6 @@ stdlib.h
 -
 compression/Huffman.h
 /home/csraea/Desktop/coma/src/compression/Huffman.h
-datatypes.h
-/home/csraea/Desktop/coma/src/datatypes.h
 
 /home/csraea/Desktop/coma/src/compression/Compressor.h
 
@@ -43,8 +43,24 @@ map
 -
 stdint.h
 -
+sys/stat.h
+-
 iostream
 -
+fcntl.h
+-
+stdlib.h
+-
+unistd.h
+-
+errno.h
+-
+../../conf/conf.h
+/home/csraea/Desktop/coma/conf/conf.h
+../datatypes.h
+/home/csraea/Desktop/coma/src/datatypes.h
+../../conf/conf.h
+/home/csraea/Desktop/coma/conf/conf.h
 Compressor.h
 /home/csraea/Desktop/coma/src/compression/Compressor.h
 

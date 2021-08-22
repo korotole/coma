@@ -16,10 +16,13 @@ src/CMakeFiles/src.dir/ExecutionController.cpp.o: ../../src/ExecutionController.
 
 src/CMakeFiles/src.dir/SecurityManager.cpp.o: ../../src/SecurityManager.cpp
 
+src/CMakeFiles/src.dir/compression/Huffman.cpp.o: ../../conf/conf.h
 src/CMakeFiles/src.dir/compression/Huffman.cpp.o: ../../src/compression/Compressor.h
 src/CMakeFiles/src.dir/compression/Huffman.cpp.o: ../../src/compression/Huffman.cpp
 src/CMakeFiles/src.dir/compression/Huffman.cpp.o: ../../src/compression/Huffman.h
+src/CMakeFiles/src.dir/compression/Huffman.cpp.o: ../../src/datatypes.h
 
+src/CMakeFiles/src.dir/main.cpp.o: ../../conf/conf.h
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/CompressionManager.h
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/compression/Compressor.h
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/compression/Huffman.h

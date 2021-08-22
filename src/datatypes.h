@@ -1,3 +1,6 @@
+#ifndef DATATYPES_H 
+#define DATATYPES_H 
+
 #include <stdint.h>
 
 enum class COMPRESSION {
@@ -6,8 +9,11 @@ enum class COMPRESSION {
 
 enum RETURN_VALUES {
     SUCCESS = 0,
-    OPEN,
-    STAT,
-    READ,
-    ALLOCATION
+    E_OPEN,
+    E_STAT,
+    E_READ,
+    E_ALLOC
 };
+
+
+#endif

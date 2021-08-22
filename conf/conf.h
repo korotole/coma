@@ -1,5 +1,12 @@
+#ifndef CONF_H
+#define CONF_H
+
 #define _LARGEFILE64_SOURCE
 #define _FILE_OFFSET_BITS 64
+
+#define _XOPEN_SOURCE 500           //especially for "pread()" and "pwrite()"
+
+#define WHOLEFILE -1
 
 /* --- PRINTF_BYTE_TO_BINARY macro's --- */
 #define PRINTF_BINARY_PATTERN_INT8 "%c%c%c%c%c%c%c%c"
@@ -26,3 +33,5 @@
 #define PRINTF_BYTE_TO_BINARY_INT64(i) \
     PRINTF_BYTE_TO_BINARY_INT32((i) >> 32), PRINTF_BYTE_TO_BINARY_INT32(i)
 /* --- end macros --- */
+
+#endif
