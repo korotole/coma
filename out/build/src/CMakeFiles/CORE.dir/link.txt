@@ -1,2 +1,0 @@
-/usr/bin/ar qc libCORE.a  CMakeFiles/CORE.dir/ArgParser.cpp.o CMakeFiles/CORE.dir/CompressionManager.cpp.o CMakeFiles/CORE.dir/DirFileManager.cpp.o CMakeFiles/CORE.dir/ExecutionController.cpp.o CMakeFiles/CORE.dir/SecurityManager.cpp.o CMakeFiles/CORE.dir/compression/huffman.cpp.o CMakeFiles/CORE.dir/main.cpp.o
-/usr/bin/ranlib libCORE.a

@@ -1,9 +1,11 @@
+rm -f ./out/valgrind-out.txt
+
 valgrind --leak-check=full \
          --show-leak-kinds=all \
          --track-origins=yes \
          --verbose \
          --log-file=./out/valgrind-out.txt \
-         ./out/coma ./out/test
+         ./out/coma ./out/coma
 
 BOLD=`tput bold`
 

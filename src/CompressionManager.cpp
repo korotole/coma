@@ -1,34 +1,59 @@
 #include "CompressionManager.h"
+#include "../conf/conf.h"
 
-uint32_t CompressionManager::compress(){
-    openFile();
-    printf("File was successfully opened\n");
+
+uint8_t CompressionManager::Initialize(char* filename) {
+    this->fdnum = 1;
+    this->fds = (int32_t*) calloc(this->fdnum, sizeof(int32_t));
+
+    this->file = (char *) calloc(1, strlen(filename)+1);
+    strcpy(this->file, filename);
+
+    compressor = new huffman::Huffman();
+}
+
+uint32_t CompressionManager::Compress(){
+
+    for(int32_t i = 0; i < this->fdnum; i++) {
+        ManageFileStream(i);
+    }
+
+    this->compressor->Compress(NULL);
+
+    for(int32_t i = 0; i < this->fdnum; i++) {
+        ManageFileStream(i);
+    }
+
     return 0;
 }
 
-void CompressionManager::openFile(){
+uint8_t CompressionManager::ManageFileStream(int32_t fd){
 
-    struct stat sb;
-    if ( stat(this->file, &sb ) == -1) {
-        perror("stat");
-        exit(STAT);
-    }
+    if( !this->fds[fd] ){
 
-    this->contents = calloc(1, sb.st_size);
+        // get the size of a file
+        struct stat sb;
+        if ( stat(this->file, &sb ) == -1) {
+            perror("stat");
+            return STAT;
+        }
 
-    int32_t fd = open64(this->file, O_RDONLY);
-    int64_t res = read(fd, contents, sb.st_size);
-    if( res < 0 ) {
-        perror("pread64");
-        exit(READ);
-    }
+        // save the size of a file
+        this->fsize = sb.st_size;
 
-    close(fd);
+        // open the file
+        this->fds[fd] = open64(this->file, O_RDONLY);
+        if( this->fds[fd] == -1){
+            perror("open");
+            return OPEN;
+        }
 
-    // for(uint8_t i = 0; i < strlen((char*)this->contents); i ++){
-    //     uint8_t* co = (uint8_t*)this->contents;
-    //     printf("%u\n", co[i]);
-    // }
+    } else {
 
-    return;
+        // close the file if non-empty fd is provided
+        close(this->fds[fd]);
+
+    } 
+    
+    return SUCCESS;
 }

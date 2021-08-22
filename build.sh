@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 BOLD=`tput bold`
 
 cmake -S . -B ./out/build/
@@ -13,6 +12,7 @@ fi
 
 make -C ./out/build/
 MAKE=$?
+
 if [[ ${MAKE} != 0 ]]; then 
     echo "${BOLD}ERROR:  make"
     exit 2

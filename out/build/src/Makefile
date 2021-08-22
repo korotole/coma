@@ -260,32 +260,32 @@ SecurityManager.cpp.s:
 	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/SecurityManager.cpp.s
 .PHONY : SecurityManager.cpp.s
 
-compression/huffman.o: compression/huffman.cpp.o
+compression/Huffman.o: compression/Huffman.cpp.o
 
-.PHONY : compression/huffman.o
+.PHONY : compression/Huffman.o
 
 # target to build an object file
-compression/huffman.cpp.o:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/huffman.cpp.o
-.PHONY : compression/huffman.cpp.o
+compression/Huffman.cpp.o:
+	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/Huffman.cpp.o
+.PHONY : compression/Huffman.cpp.o
 
-compression/huffman.i: compression/huffman.cpp.i
+compression/Huffman.i: compression/Huffman.cpp.i
 
-.PHONY : compression/huffman.i
+.PHONY : compression/Huffman.i
 
 # target to preprocess a source file
-compression/huffman.cpp.i:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/huffman.cpp.i
-.PHONY : compression/huffman.cpp.i
+compression/Huffman.cpp.i:
+	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/Huffman.cpp.i
+.PHONY : compression/Huffman.cpp.i
 
-compression/huffman.s: compression/huffman.cpp.s
+compression/Huffman.s: compression/Huffman.cpp.s
 
-.PHONY : compression/huffman.s
+.PHONY : compression/Huffman.s
 
 # target to generate assembly for a file
-compression/huffman.cpp.s:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/huffman.cpp.s
-.PHONY : compression/huffman.cpp.s
+compression/Huffman.cpp.s:
+	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/Huffman.cpp.s
+.PHONY : compression/Huffman.cpp.s
 
 main.o: main.cpp.o
 
@@ -338,9 +338,9 @@ help:
 	@echo "... SecurityManager.o"
 	@echo "... SecurityManager.i"
 	@echo "... SecurityManager.s"
-	@echo "... compression/huffman.o"
-	@echo "... compression/huffman.i"
-	@echo "... compression/huffman.s"
+	@echo "... compression/Huffman.o"
+	@echo "... compression/Huffman.i"
+	@echo "... compression/Huffman.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

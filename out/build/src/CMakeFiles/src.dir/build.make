@@ -122,18 +122,18 @@ src/CMakeFiles/src.dir/SecurityManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/SecurityManager.cpp.s"
 	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/SecurityManager.cpp -o CMakeFiles/src.dir/SecurityManager.cpp.s
 
-src/CMakeFiles/src.dir/compression/huffman.cpp.o: src/CMakeFiles/src.dir/flags.make
-src/CMakeFiles/src.dir/compression/huffman.cpp.o: ../../src/compression/huffman.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/src.dir/compression/huffman.cpp.o"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/compression/huffman.cpp.o -c /home/csraea/Desktop/coma/src/compression/huffman.cpp
+src/CMakeFiles/src.dir/compression/Huffman.cpp.o: src/CMakeFiles/src.dir/flags.make
+src/CMakeFiles/src.dir/compression/Huffman.cpp.o: ../../src/compression/Huffman.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/src.dir/compression/Huffman.cpp.o"
+	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/compression/Huffman.cpp.o -c /home/csraea/Desktop/coma/src/compression/Huffman.cpp
 
-src/CMakeFiles/src.dir/compression/huffman.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/compression/huffman.cpp.i"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/src/compression/huffman.cpp > CMakeFiles/src.dir/compression/huffman.cpp.i
+src/CMakeFiles/src.dir/compression/Huffman.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/compression/Huffman.cpp.i"
+	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/src/compression/Huffman.cpp > CMakeFiles/src.dir/compression/Huffman.cpp.i
 
-src/CMakeFiles/src.dir/compression/huffman.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/compression/huffman.cpp.s"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/compression/huffman.cpp -o CMakeFiles/src.dir/compression/huffman.cpp.s
+src/CMakeFiles/src.dir/compression/Huffman.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/compression/Huffman.cpp.s"
+	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/compression/Huffman.cpp -o CMakeFiles/src.dir/compression/Huffman.cpp.s
 
 src/CMakeFiles/src.dir/main.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/main.cpp
@@ -155,7 +155,7 @@ src_OBJECTS = \
 "CMakeFiles/src.dir/DirFileManager.cpp.o" \
 "CMakeFiles/src.dir/ExecutionController.cpp.o" \
 "CMakeFiles/src.dir/SecurityManager.cpp.o" \
-"CMakeFiles/src.dir/compression/huffman.cpp.o" \
+"CMakeFiles/src.dir/compression/Huffman.cpp.o" \
 "CMakeFiles/src.dir/main.cpp.o"
 
 # External object files for target src
@@ -166,7 +166,7 @@ src/libsrc.a: src/CMakeFiles/src.dir/CompressionManager.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/DirFileManager.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/ExecutionController.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/SecurityManager.cpp.o
-src/libsrc.a: src/CMakeFiles/src.dir/compression/huffman.cpp.o
+src/libsrc.a: src/CMakeFiles/src.dir/compression/Huffman.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/main.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/build.make
 src/libsrc.a: src/CMakeFiles/src.dir/link.txt

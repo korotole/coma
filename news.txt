@@ -1,5 +1,10 @@
 COMA (version 0.0.1)
-===============================================================================
+=========================================================================================
+  * Added [COMA-2] Implement Huffman compression {1}
+          - added abstract class Compressor
+          - added a function for opening & closing files: ManageFileStream()
+          - added a macro for printing binary from int32
+          - added Initialize() function into CompressionManager class
   * Added [COMA-3] Add memory leaks checking {2}
           - run.sh updated in order to display number of errors after the
             execution if they are present

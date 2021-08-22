@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
+/home/csraea/Desktop/coma/conf/conf.h
+
 /home/csraea/Desktop/coma/src/CompressionManager.cpp
 CompressionManager.h
 /home/csraea/Desktop/coma/src/CompressionManager.h
+../conf/conf.h
+/home/csraea/Desktop/coma/conf/conf.h
 
 /home/csraea/Desktop/coma/src/CompressionManager.h
 cstdlib
@@ -33,8 +37,28 @@ iostream
 -
 fcntl.h
 -
+stdlib.h
+-
+compression/Huffman.h
+/home/csraea/Desktop/coma/src/compression/Huffman.h
 datatypes.h
 /home/csraea/Desktop/coma/src/datatypes.h
+
+/home/csraea/Desktop/coma/src/compression/Compressor.h
+
+/home/csraea/Desktop/coma/src/compression/Huffman.cpp
+Huffman.h
+/home/csraea/Desktop/coma/src/compression/Huffman.h
+
+/home/csraea/Desktop/coma/src/compression/Huffman.h
+map
+-
+stdint.h
+-
+iostream
+-
+Compressor.h
+/home/csraea/Desktop/coma/src/compression/Compressor.h
 
 /home/csraea/Desktop/coma/src/datatypes.h
 stdint.h

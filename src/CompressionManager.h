@@ -9,30 +9,41 @@
 #include <sys/stat.h>
 #include <iostream>
 #include <fcntl.h>
+#include <stdlib.h>
+
+#include "compression/Huffman.h"
+
 #include "datatypes.h"
 
+
 class CompressionManager {
+    private:
+        char *file;
+        off64_t fsize;
+
+        int32_t *fds;
+        int32_t fdnum;
+
+        Compressor *compressor;
+
     public:
-        char* file;
-        void* contents;
-
         CompressionManager(char* filename){ 
-            file = (char *) calloc(1, strlen(filename)+1);
-            strcpy(file, filename);
-
-            contents = NULL;
-        }
+            
+            Initialize(filename);
+            
+        };
         
-        uint32_t compress();
-        uint8_t decompress();
+        uint32_t Compress();
+        uint8_t Decompress();
 
         ~CompressionManager(){
             free(file);
-            if( contents ) free(contents);
+            free(fds);
+            delete compressor;
         };
 
     private:
-        void openFile();
+        uint8_t Initialize(char* filename);
+        uint8_t ManageFileStream(int32_t fd);
         
-
 };

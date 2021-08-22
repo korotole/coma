@@ -29,8 +29,24 @@ iostream
 -
 fcntl.h
 -
+stdlib.h
+-
+compression/Huffman.h
+/home/csraea/Desktop/coma/src/compression/Huffman.h
 datatypes.h
 /home/csraea/Desktop/coma/src/datatypes.h
+
+/home/csraea/Desktop/coma/src/compression/Compressor.h
+
+/home/csraea/Desktop/coma/src/compression/Huffman.h
+map
+-
+stdint.h
+-
+iostream
+-
+Compressor.h
+/home/csraea/Desktop/coma/src/compression/Compressor.h
 
 /home/csraea/Desktop/coma/src/datatypes.h
 stdint.h
