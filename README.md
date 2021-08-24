@@ -23,4 +23,4 @@ In order to build the project `build.sh` script must be run from the root direct
 In order to run the project `run.sh` script must be executed from the root directory of a project.
 
 ## Contributions
-Any contributions are welcome, feedback is sincerely appreciated. Any changes should me mentioned at the `news.txt` file.
+Any contributions are welcome, feedback is sincerely appreciated. Any changes should be mentioned at the `news.txt` file.
