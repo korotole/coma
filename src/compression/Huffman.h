@@ -24,7 +24,7 @@ namespace huffman {
  
     class Huffman : public Compressor {
         private:
-            std::map<int64_t, uint32_t> distribution = {};
+            std::map<uint8_t, uint32_t> distribution = {};
             int32_t fd;
         
         
@@ -43,7 +43,7 @@ namespace huffman {
         
         private:
             int32_t ComputeEntryDistribution(int32_t fd);
-            bool CheckMap(std::map<int64_t, uint32_t> m, int16_t key);
+            bool CheckMap(std::map<uint8_t, uint32_t> m, uint8_t key);
         
     };
 

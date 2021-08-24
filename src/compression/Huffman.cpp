@@ -16,7 +16,7 @@ void Huffman::Decompress(void* stream) {
 int32_t Huffman::ComputeEntryDistribution(int32_t fd) {
 
     ssize_t ret = 0;
-    int64_t buf = 0;
+    uint8_t buf = 0;
     uint64_t fileOffset1 = 0;
 
     uint64_t mapCounter = 0;
@@ -49,7 +49,7 @@ int32_t Huffman::ComputeEntryDistribution(int32_t fd) {
     return SUCCESS;
 }
 
-bool Huffman::CheckMap(std::map<int64_t, uint32_t> m, int16_t key) {
+bool Huffman::CheckMap(std::map<uint8_t, uint32_t> m, uint8_t key) {
 
     return (m.find(key) == m.end()) ? false : true;
 }

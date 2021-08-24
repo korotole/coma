@@ -8,6 +8,40 @@
 
 /home/csraea/Desktop/coma/conf/conf.h
 
+/home/csraea/Desktop/coma/src/CompressionManager.cpp
+CompressionManager.h
+/home/csraea/Desktop/coma/src/CompressionManager.h
+../conf/conf.h
+/home/csraea/Desktop/coma/conf/conf.h
+
+/home/csraea/Desktop/coma/src/CompressionManager.h
+cstdlib
+-
+stdint.h
+-
+string
+-
+string.h
+-
+vector
+-
+list
+-
+map
+-
+unistd.h
+-
+sys/stat.h
+-
+iostream
+-
+fcntl.h
+-
+stdlib.h
+-
+compression/Huffman.h
+/home/csraea/Desktop/coma/src/compression/Huffman.h
+
 /home/csraea/Desktop/coma/src/compression/Compressor.h
 
 /home/csraea/Desktop/coma/src/compression/Huffman.cpp
@@ -43,4 +77,12 @@ Compressor.h
 /home/csraea/Desktop/coma/src/datatypes.h
 stdint.h
 -
+
+/home/csraea/Desktop/coma/src/main.cpp
+cstdio
+-
+iostream
+-
+CompressionManager.h
+/home/csraea/Desktop/coma/src/CompressionManager.h
 

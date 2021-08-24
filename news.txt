@@ -1,5 +1,9 @@
 COMA (version 0.0.1)
 =========================================================================================
+  * Added [COMA-2] Implement Huffman compression {2}
+          - Draft functions
+  * Added [COMA-4] Add README.md {1}
+          - added README.md with brief project description
   * Added [COMA-2] Implement Huffman compression {1}
           - added abstract class Compressor
           - added a function for opening & closing files: ManageFileStream()
