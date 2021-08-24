@@ -51,11 +51,15 @@ Huffman.h
 /home/csraea/Desktop/coma/src/compression/Huffman.h
 map
 -
+iostream
+-
+list
+-
+vector
+-
 stdint.h
 -
 sys/stat.h
--
-iostream
 -
 fcntl.h
 -

@@ -5,7 +5,7 @@ using namespace huffman;
 void Huffman::Compress(void* stream) {
 
     std::cout << "Compression from Huffman!!" << std::endl;
-    ComputeEntryDistribution(this->fd);
+    ComputeDistribution(this->fd);
 
 }
 
@@ -13,11 +13,58 @@ void Huffman::Decompress(void* stream) {
 
 }
 
-int32_t Huffman::ComputeEntryDistribution(int32_t fd) {
+void Huffman::SortAndMerge(std::list<Node*> nodes){
+
+    while (nodes.size() != 1) {
+        
+        nodes.sort(CompareObj());
+
+        Node *L = nodes.front();
+        nodes.pop_front();
+        Node *R = nodes.front();
+        nodes.pop_front();
+
+        Node *P = (Node*) calloc(1, sizeof(Node));
+        P->left = L;
+        P->right = R;
+        P->value = L->value + R->value;
+
+        nodes.push_back(P);
+
+    }
+    
+}
+
+void Huffman::AchieveNodes(std::map<uint8_t, uint32_t> distribution){
+
+    for(auto i = distribution.begin(); i != distribution.end(); i++) {
+        Node *n = (Node *) calloc(1, sizeof(Node));
+        n->key = i->first;
+        n->value = i->second;
+
+        n->left = NULL;
+        n->right = NULL;
+
+        this->nodes.push_back(n);
+    }
+}
+
+void Huffman::FreeNodes(Node *node) {
+    if(node == NULL) {
+        return;
+    }
+
+    FreeNodes(node->left);
+    FreeNodes(node->right);
+
+    free(node);
+}
+
+uint8_t Huffman::ComputeDistribution(int32_t fd) {
 
     ssize_t ret = 0;
     uint8_t buf = 0;
-    uint64_t fileOffset1 = 0;
+    uint8_t fileOffset1 = 0;
 
     uint64_t mapCounter = 0;
     
@@ -40,7 +87,7 @@ int32_t Huffman::ComputeEntryDistribution(int32_t fd) {
     for( auto it = this->distribution.cbegin(); it != this->distribution.cend(); it++ ){
 
         printf(PRINTF_BINARY_PATTERN_INT64 "\t%d\n", PRINTF_BYTE_TO_BINARY_INT64((*it).first), (*it).second);
-        // std::cout << (*it).first << "\t" << (*it).second << std::endl;
+
     }
 
     std::cout << "\nSize of map:\t" << this->distribution.size() << std::endl;
