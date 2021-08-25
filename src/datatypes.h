@@ -1,8 +1,6 @@
 #ifndef DATATYPES_H 
 #define DATATYPES_H 
 
-#include <stdint.h>
-
 enum class COMPRESSION {
     HUFFMAN
 };
