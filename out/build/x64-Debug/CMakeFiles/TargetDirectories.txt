@@ -1,0 +1,6 @@
+C:/Users/korotetskyi/Desktop/coma/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/korotetskyi/Desktop/coma/out/build/x64-Debug/CMakeFiles/coma.dir
+C:/Users/korotetskyi/Desktop/coma/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/korotetskyi/Desktop/coma/out/build/x64-Debug/src/CMakeFiles/src.dir
+C:/Users/korotetskyi/Desktop/coma/out/build/x64-Debug/src/CMakeFiles/edit_cache.dir
+C:/Users/korotetskyi/Desktop/coma/out/build/x64-Debug/src/CMakeFiles/rebuild_cache.dir
