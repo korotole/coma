@@ -287,6 +287,33 @@ compression/Huffman.cpp.s:
 	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/Huffman.cpp.s
 .PHONY : compression/Huffman.cpp.s
 
+compression/HuffmanNode.o: compression/HuffmanNode.cpp.o
+
+.PHONY : compression/HuffmanNode.o
+
+# target to build an object file
+compression/HuffmanNode.cpp.o:
+	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.o
+.PHONY : compression/HuffmanNode.cpp.o
+
+compression/HuffmanNode.i: compression/HuffmanNode.cpp.i
+
+.PHONY : compression/HuffmanNode.i
+
+# target to preprocess a source file
+compression/HuffmanNode.cpp.i:
+	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.i
+.PHONY : compression/HuffmanNode.cpp.i
+
+compression/HuffmanNode.s: compression/HuffmanNode.cpp.s
+
+.PHONY : compression/HuffmanNode.s
+
+# target to generate assembly for a file
+compression/HuffmanNode.cpp.s:
+	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.s
+.PHONY : compression/HuffmanNode.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -341,6 +368,9 @@ help:
 	@echo "... compression/Huffman.o"
 	@echo "... compression/Huffman.i"
 	@echo "... compression/Huffman.s"
+	@echo "... compression/HuffmanNode.o"
+	@echo "... compression/HuffmanNode.i"
+	@echo "... compression/HuffmanNode.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

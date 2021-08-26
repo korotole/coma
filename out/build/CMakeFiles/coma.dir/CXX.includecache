@@ -59,6 +59,8 @@ unistd.h
 -
 errno.h
 -
+HuffmanNode.h
+/home/csraea/Desktop/coma/src/compression/HuffmanNode.h
 ../../conf/conf.h
 /home/csraea/Desktop/coma/conf/conf.h
 ../datatypes.h
@@ -68,9 +70,11 @@ errno.h
 Compressor.h
 /home/csraea/Desktop/coma/src/compression/Compressor.h
 
-/home/csraea/Desktop/coma/src/datatypes.h
+/home/csraea/Desktop/coma/src/compression/HuffmanNode.h
 stdint.h
--
+/home/csraea/Desktop/coma/src/compression/stdint.h
+
+/home/csraea/Desktop/coma/src/datatypes.h
 
 /home/csraea/Desktop/coma/src/main.cpp
 cstdio

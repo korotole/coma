@@ -5,6 +5,7 @@ CMakeFiles/coma.dir/src/main.cpp.o: ../../conf/conf.h
 CMakeFiles/coma.dir/src/main.cpp.o: ../../src/CompressionManager.h
 CMakeFiles/coma.dir/src/main.cpp.o: ../../src/compression/Compressor.h
 CMakeFiles/coma.dir/src/main.cpp.o: ../../src/compression/Huffman.h
+CMakeFiles/coma.dir/src/main.cpp.o: ../../src/compression/HuffmanNode.h
 CMakeFiles/coma.dir/src/main.cpp.o: ../../src/datatypes.h
 CMakeFiles/coma.dir/src/main.cpp.o: ../../src/main.cpp
 

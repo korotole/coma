@@ -6,5 +6,6 @@ CMakeFiles/coma.dir/src/main.cpp.o
  /home/csraea/Desktop/coma/src/CompressionManager.h
  /home/csraea/Desktop/coma/src/compression/Compressor.h
  /home/csraea/Desktop/coma/src/compression/Huffman.h
+ /home/csraea/Desktop/coma/src/compression/HuffmanNode.h
  /home/csraea/Desktop/coma/src/datatypes.h
  /home/csraea/Desktop/coma/src/main.cpp

@@ -9,6 +9,7 @@ uint8_t CompressionManager::Initialize(char* filename) {
     this->file = (char *) calloc(1, strlen(filename)+1);
     strcpy(this->file, filename);
 
+    return 0;
 }
 
 uint32_t CompressionManager::Compress(){
@@ -17,7 +18,7 @@ uint32_t CompressionManager::Compress(){
         ManageFileStream(i);
     }
 
-    compressor = new huffman::Huffman(this->fds[0]);
+    compressor = new Huffman(this->fds[0]);
     this->compressor->Compress(NULL);
 
     for(int32_t i = 0; i < this->fdnum; i++) {

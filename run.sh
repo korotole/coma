@@ -5,7 +5,7 @@ valgrind --leak-check=full \
          --track-origins=yes \
          --verbose \
          --log-file=./out/valgrind-out.txt \
-         ./out/coma ./out/t > out1.txt
+         ./out/coma ./out/test > ./out/out.txt
 
 BOLD=`tput bold`
 

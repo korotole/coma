@@ -25,7 +25,7 @@ class Huffman : public Compressor {
         std::map<uint8_t, uint32_t> distribution = {};
         std::list<HuffmanNode*> tree = {};
         std::vector<bool> code = {};
-        std::map<uint8_t, std::vector<bool>> table = {};
+        std::map< uint8_t, std::vector<bool> > table = {};
         int32_t fd;
         
     public:
@@ -45,9 +45,11 @@ class Huffman : public Compressor {
         uint8_t ComputeDistribution(int32_t fd);
         void AchieveNodes(void);
         bool CheckMap(std::map<uint8_t, uint32_t> m, uint8_t key);
-        void SortAndMerge(std::list<HuffmanNode*> tree);
+        void SortAndMerge();
         void FreeNodes(HuffmanNode *node);
         void CreateCodeTable(HuffmanNode *root);
+        uint8_t PrintTableElem();
+        void PrintTable();
         
 };
 

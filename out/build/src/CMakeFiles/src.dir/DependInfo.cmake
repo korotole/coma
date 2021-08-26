@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/csraea/Desktop/coma/src/ExecutionController.cpp" "/home/csraea/Desktop/coma/out/build/src/CMakeFiles/src.dir/ExecutionController.cpp.o"
   "/home/csraea/Desktop/coma/src/SecurityManager.cpp" "/home/csraea/Desktop/coma/out/build/src/CMakeFiles/src.dir/SecurityManager.cpp.o"
   "/home/csraea/Desktop/coma/src/compression/Huffman.cpp" "/home/csraea/Desktop/coma/out/build/src/CMakeFiles/src.dir/compression/Huffman.cpp.o"
+  "/home/csraea/Desktop/coma/src/compression/HuffmanNode.cpp" "/home/csraea/Desktop/coma/out/build/src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.o"
   "/home/csraea/Desktop/coma/src/main.cpp" "/home/csraea/Desktop/coma/out/build/src/CMakeFiles/src.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

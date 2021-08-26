@@ -1,5 +1,9 @@
 COMA (version 0.0.1)
 =========================================================================================
+  * Added [COMA-2] Implement Huffman compression {3}
+          - compilation warnings removed
+          - implemented a new class HuffmanNode
+          - added new variables and functions to Huffman class
   * Added [COMA-2] Implement Huffman compression {2}
           - Draft functions
   * Added [COMA-4] Add README.md {1}

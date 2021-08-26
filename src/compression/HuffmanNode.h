@@ -25,7 +25,7 @@ class HuffmanNode {
         HuffmanNode(HuffmanNode *L, HuffmanNode *R) {
           this->left = L;
           this->right = R;
-          this->key = (uint8_t) NULL;
+          this->key = 0;
           this->value = L->value + R->value;
         }
 
@@ -33,8 +33,11 @@ class HuffmanNode {
           
         }
 
-        bool Compare(HuffmanNode *L, HuffmanNode *R) const;
-
+        struct OCompare {
+            bool operator()(HuffmanNode *L, HuffmanNode *R) const {
+              return L->value != R->value ? L->value < R->value : L->key < R->key;
+            }
+        };
 };
 
 #endif

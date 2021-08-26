@@ -9,6 +9,7 @@ src/CMakeFiles/src.dir/CompressionManager.cpp.o
  /home/csraea/Desktop/coma/src/CompressionManager.h
  /home/csraea/Desktop/coma/src/compression/Compressor.h
  /home/csraea/Desktop/coma/src/compression/Huffman.h
+ /home/csraea/Desktop/coma/src/compression/HuffmanNode.h
  /home/csraea/Desktop/coma/src/datatypes.h
 src/CMakeFiles/src.dir/DirFileManager.cpp.o
  /home/csraea/Desktop/coma/src/DirFileManager.cpp
@@ -21,11 +22,16 @@ src/CMakeFiles/src.dir/compression/Huffman.cpp.o
  /home/csraea/Desktop/coma/src/compression/Compressor.h
  /home/csraea/Desktop/coma/src/compression/Huffman.cpp
  /home/csraea/Desktop/coma/src/compression/Huffman.h
+ /home/csraea/Desktop/coma/src/compression/HuffmanNode.h
  /home/csraea/Desktop/coma/src/datatypes.h
+src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.o
+ /home/csraea/Desktop/coma/src/compression/HuffmanNode.cpp
+ /home/csraea/Desktop/coma/src/compression/HuffmanNode.h
 src/CMakeFiles/src.dir/main.cpp.o
  /home/csraea/Desktop/coma/conf/conf.h
  /home/csraea/Desktop/coma/src/CompressionManager.h
  /home/csraea/Desktop/coma/src/compression/Compressor.h
  /home/csraea/Desktop/coma/src/compression/Huffman.h
+ /home/csraea/Desktop/coma/src/compression/HuffmanNode.h
  /home/csraea/Desktop/coma/src/datatypes.h
  /home/csraea/Desktop/coma/src/main.cpp
