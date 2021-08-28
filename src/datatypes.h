@@ -10,6 +10,7 @@ enum RETURN_VALUES {
     E_OPEN,
     E_STAT,
     E_READ,
+    E_WRITE,
     E_ALLOC
 };
 

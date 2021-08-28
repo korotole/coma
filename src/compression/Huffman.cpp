@@ -2,8 +2,7 @@
 
 
 void Huffman::Compress(void* stream) {
-
-    std::cout << "Compression from Huffman!!" << std::endl;
+    
     ComputeDistribution(this->fd);
     AchieveNodes();
     SortAndMerge();
@@ -73,9 +72,11 @@ void Huffman::FreeNodes(HuffmanNode *node) {
 uint8_t Huffman::PrintTableElem() {
     ssize_t ret = 0;
     uint8_t buf = 0;
-    uint64_t fileOffset1 = 0;
+    uint64_t fileOffset1 = 0, fileOffset2 = 0;
 
-    // slow positional read
+    int32_t fd2 = open("./out/output.cm", O_CREAT | O_RDWR);
+    int16_t count = 0;
+
     while((ret = pread(fd, &buf, 1, fileOffset1)) != 0){
         if(ret == -1){
             if (errno == EINTR) continue; // handling some frequent interruptions
@@ -84,10 +85,30 @@ uint8_t Huffman::PrintTableElem() {
         fileOffset1++;
 
         std::vector<bool> x = this->table[buf];
-        for(auto const &bit : x) {
-            std::cout << bit;
+
+        buf = 0;
+        
+        for(int8_t bit = 0; bit < x.size(); bit++) {
+            
+            buf = buf | x[bit] << (7 - count);
+            count++;
+
+            if(count == 8) {
+                count = 0;
+                if((ret = pwrite(fd2, &buf, 1, fileOffset2)) != 0){
+                    if(ret == -1){
+                        if (errno != EINTR) return E_WRITE;
+                    }
+                }
+
+                fileOffset2++;
+            }
+
         }
+
     }
+
+    close(fd2);
 
     return SUCCESS;
 }
