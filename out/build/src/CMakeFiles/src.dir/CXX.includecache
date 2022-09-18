@@ -6,49 +6,43 @@
 
 #IncludeRegexTransform: 
 
-/home/csraea/Desktop/coma/conf/conf.h
+/home/korale/Desktop/c_tutorials/coma/conf/conf.h
 
-/home/csraea/Desktop/coma/src/compression/Compressor.h
+/home/korale/Desktop/c_tutorials/coma/src/Common.h
 
-/home/csraea/Desktop/coma/src/compression/Huffman.cpp
-Huffman.h
-/home/csraea/Desktop/coma/src/compression/Huffman.h
+/home/korale/Desktop/c_tutorials/coma/src/CompressionManager.cpp
+CompressionManager.h
+/home/korale/Desktop/c_tutorials/coma/src/CompressionManager.h
+../conf/conf.h
+/home/korale/Desktop/c_tutorials/coma/conf/conf.h
+Common.h
+/home/korale/Desktop/c_tutorials/coma/src/Common.h
 
-/home/csraea/Desktop/coma/src/compression/Huffman.h
-map
--
-iostream
--
-list
--
-vector
--
+/home/korale/Desktop/c_tutorials/coma/src/CompressionManager.h
 stdint.h
 -
+string.h
+-
+unistd.h
+-
 sys/stat.h
+-
+iostream
 -
 fcntl.h
 -
 stdlib.h
 -
-unistd.h
+stdarg.h
 -
-errno.h
+getopt.h
 -
-HuffmanNode.h
-/home/csraea/Desktop/coma/src/compression/HuffmanNode.h
-../../conf/conf.h
-/home/csraea/Desktop/coma/conf/conf.h
-../datatypes.h
-/home/csraea/Desktop/coma/src/datatypes.h
-../../conf/conf.h
-/home/csraea/Desktop/coma/conf/conf.h
-Compressor.h
-/home/csraea/Desktop/coma/src/compression/Compressor.h
 
-/home/csraea/Desktop/coma/src/compression/HuffmanNode.h
-stdint.h
-/home/csraea/Desktop/coma/src/compression/stdint.h
-
-/home/csraea/Desktop/coma/src/datatypes.h
+/home/korale/Desktop/c_tutorials/coma/src/main.cpp
+cstdio
+-
+iostream
+-
+CompressionManager.h
+/home/korale/Desktop/c_tutorials/coma/src/CompressionManager.h
 

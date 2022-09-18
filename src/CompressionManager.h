@@ -1,50 +1,56 @@
 #ifndef COMPRESSIONMANAGER_H 
 #define COMPRESSIONMANAGER_H
 
-#include <cstdlib>
 #include <stdint.h>
-#include <string>
 #include <string.h>
-#include <vector>
-#include <list>
-#include <map>
 #include <unistd.h>
 #include <sys/stat.h>
 #include <iostream>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <stdarg.h>
+#include <getopt.h>
 
-#include "compression/Huffman.h"
+typedef struct {
+    int32_t fd1;
+    int32_t fd2;
+    off64_t fileOffset1;
+    off64_t fileOffset2;
+    off64_t amount;
+} params_t;
 
 class CompressionManager {
     private:
-        char *file;
-        off64_t fsize;
+        struct Options {
+            char infile[128]    = "\0";
+            char outfile[128]   = "\0";
+            uint8_t mode        = 0;
+        } opts;
 
-        int32_t *fds;
-        int32_t fdnum;
-
-        Compressor *compressor;
+        params_t params = { 0 };
 
     public:
-        CompressionManager(char* filename){ 
-            
-            Initialize(filename);
+        CompressionManager(int argc, char** argv){ 
+            if(!ParseOptions(argc, argv))
+            {
+                exit(EXIT_FAILURE);
+            }
 
+            Initialize();
         };
-        
-        uint32_t Compress();
-        uint8_t Decompress();
 
-        ~CompressionManager(){
-            free(file);
-            free(fds);
-            delete compressor;
-        };
+        ~CompressionManager(){ };
+
+        off64_t DoWork();
 
     private:
-        uint8_t Initialize(char* filename);
-        uint8_t ManageFileStream(int32_t fd);
+        int32_t Compress();
+        int32_t Decompress();
+
+        uint8_t Initialize();
+
+        void PrintHelpMessage(char* msg=NULL);
+        bool ParseOptions(int argc, char **argv);
         
 };
 

@@ -1,60 +1,98 @@
 #include "CompressionManager.h"
 #include "../conf/conf.h"
+#include "Common.h"
 
 
-uint8_t CompressionManager::Initialize(char* filename) {
-    this->fdnum = 1;
-    this->fds = (int32_t*) calloc(this->fdnum, sizeof(int32_t));
-
-    this->file = (char *) calloc(1, strlen(filename)+1);
-    strcpy(this->file, filename);
-
+uint8_t CompressionManager::Initialize() 
+{
     return 0;
 }
 
-uint32_t CompressionManager::Compress(){
+off64_t CompressionManager::DoWork() {
+    char buf[BUFSIZ];
+    memset(buf, 0, sizeof(buf));
+    ssize_t ret = 0;
 
-    for(int32_t i = 0; i < this->fdnum; i++) {
-        ManageFileStream(i);
-    }
+    while ((ret = pread(params.fd1, buf, 
+                        (params.amount > BUFSIZ) ? BUFSIZ : params.amount, 
+                        params.fileOffset1)) != 0 && (params.amount - ret >= 0)) {
+        if (ret == -1) {
+            if (errno == EINTR) continue; // handling some frequent interruptions
+            return -1;
+        }
+        params.fileOffset1 += ret;
 
-    compressor = new Huffman(this->fds[0]);
-    this->compressor->Compress(NULL);
+        // TODO: compress data or decompress data with function pointer
 
-    for(int32_t i = 0; i < this->fdnum; i++) {
-        ManageFileStream(i);
-    }
-
-    return 0;
-}
-
-uint8_t CompressionManager::ManageFileStream(int32_t fd){
-
-    if( !this->fds[fd] ){
-
-        // get the size of a file
-        struct stat sb;
-        if ( stat(this->file, &sb ) == -1) {
-            perror("stat");
-            return E_STAT;
+        if((ret = pwrite(params.fd2, buf, ret, params.fileOffset2)) != 0){
+            if (ret == -1) {
+                if (errno == EINTR) continue; // handling some frequent interruptions
+                return -1;
+            }
         }
 
-        // save the size of a file
-        this->fsize = sb.st_size;
+        params.fileOffset2 += ret;
+        params.amount -= (int) ret;
+    }
 
-        // open the file
-        this->fds[fd] = open64(this->file, O_RDONLY);
-        if( this->fds[fd] == -1){
-            perror("open");
-            return E_OPEN;
-        }
-
-    } else {
-
-        // close the file if non-empty fd is provided
-        close(this->fds[fd]);
-
-    } 
-    
-    return SUCCESS;
+    return ret;
 }
+
+void CompressionManager::PrintHelpMessage(char* msg){
+    if(msg != NULL) fprintf(stderr, "Error: %s, errno: %d\n", msg, errno);
+    else {
+        printf("\033[1m" "--- COMA ---\n" "\033[22m");
+        printf("COmpression MAnager: an utility to (de)compress a file with specified parameters\n");
+        printf("\033[1m" "Usage:" "\033[22m" " [OPTION]...\n"); 
+        printf("\033[1m" " -i. --infile:""\033[22m" "    a file to operate with\n");
+        printf("\033[1m" " -o, --outfile:""\033[22m" "   a file with the desired output\n");
+        printf("\033[1m" " -m, --mode:""\033[22m" "      'c' for compression, 'd' for decompression\n");
+    }
+}
+
+bool CompressionManager::ParseOptions(int argc, char** argv) {
+    // extern int optind;
+    extern char* optarg;
+    char c = 0;
+
+    while (1)
+    {        
+        int option_index = 0;
+        
+        static struct option long_options[] = {
+            { "infile",    required_argument, 0, 'i' },
+            { "outfile",   required_argument, 0, 'o' }, 
+            { "mode",      required_argument, 0, 'm' },
+            { "help",      no_argument,       0, 'h' },
+            { 0,             0,               0,  0  },
+        };
+        c = getopt_long(argc, argv, "i:o:m:h", long_options, &option_index);
+        if (c == -1)
+            break; 
+        
+        switch (c)
+        {
+            case 'i':
+                strcpy(opts.infile, optarg);
+                break;
+            case 'o':
+                strcpy(opts.outfile, optarg);
+                break;
+            case 'm':
+                if(strcmp(optarg, "c\0"))
+                    opts.mode = 0;
+                else if(strcmp(optarg, "d\0"))
+                    opts.mode = 1;
+                else {
+                    PrintHelpMessage("Invalid mode");
+                    return false; }
+                break;
+            case '?': case 'h':
+            default:
+                PrintHelpMessage(NULL);
+                return false;
+        }
+    }
+
+    return true;
+};

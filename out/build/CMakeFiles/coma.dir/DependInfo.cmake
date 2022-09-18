@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/csraea/Desktop/coma/src/main.cpp" "/home/csraea/Desktop/coma/out/build/CMakeFiles/coma.dir/src/main.cpp.o"
+  "/home/korale/Desktop/c_tutorials/coma/src/main.cpp" "/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles/coma.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,7 +18,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/csraea/Desktop/coma/out/build/src/CMakeFiles/src.dir/DependInfo.cmake"
+  "/home/korale/Desktop/c_tutorials/coma/out/build/src/CMakeFiles/src.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

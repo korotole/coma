@@ -5,7 +5,7 @@
 
 // #define _LARGEFILE64_SOURCE
 // #define _FILE_OFFSET_BITS 64
-// #define _XOPEN_SOURCE 500           //especially for "pread()" and "pwrite()"
+// #define _XOPEN_SOURCE 500           // especially for "pread()" and "pwrite()"
 
 /* --- PRINTF_BYTE_TO_BINARY macro's --- */
 #define PRINTF_BINARY_PATTERN_INT8 "%c%c%c%c%c%c%c%c"

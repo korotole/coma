@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csraea/Desktop/coma
+CMAKE_SOURCE_DIR = /home/korale/Desktop/c_tutorials/coma
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csraea/Desktop/coma/out/build
+CMAKE_BINARY_DIR = /home/korale/Desktop/c_tutorials/coma/out/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/src.dir/depend.make
@@ -57,137 +57,47 @@ include src/CMakeFiles/src.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/src.dir/flags.make
 
-src/CMakeFiles/src.dir/ArgParser.cpp.o: src/CMakeFiles/src.dir/flags.make
-src/CMakeFiles/src.dir/ArgParser.cpp.o: ../../src/ArgParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/src.dir/ArgParser.cpp.o"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/ArgParser.cpp.o -c /home/csraea/Desktop/coma/src/ArgParser.cpp
-
-src/CMakeFiles/src.dir/ArgParser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/ArgParser.cpp.i"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/src/ArgParser.cpp > CMakeFiles/src.dir/ArgParser.cpp.i
-
-src/CMakeFiles/src.dir/ArgParser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/ArgParser.cpp.s"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/ArgParser.cpp -o CMakeFiles/src.dir/ArgParser.cpp.s
-
 src/CMakeFiles/src.dir/CompressionManager.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/CompressionManager.cpp.o: ../../src/CompressionManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/src.dir/CompressionManager.cpp.o"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/CompressionManager.cpp.o -c /home/csraea/Desktop/coma/src/CompressionManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/src.dir/CompressionManager.cpp.o"
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/CompressionManager.cpp.o -c /home/korale/Desktop/c_tutorials/coma/src/CompressionManager.cpp
 
 src/CMakeFiles/src.dir/CompressionManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/CompressionManager.cpp.i"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/src/CompressionManager.cpp > CMakeFiles/src.dir/CompressionManager.cpp.i
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/korale/Desktop/c_tutorials/coma/src/CompressionManager.cpp > CMakeFiles/src.dir/CompressionManager.cpp.i
 
 src/CMakeFiles/src.dir/CompressionManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/CompressionManager.cpp.s"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/CompressionManager.cpp -o CMakeFiles/src.dir/CompressionManager.cpp.s
-
-src/CMakeFiles/src.dir/DirFileManager.cpp.o: src/CMakeFiles/src.dir/flags.make
-src/CMakeFiles/src.dir/DirFileManager.cpp.o: ../../src/DirFileManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/src.dir/DirFileManager.cpp.o"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/DirFileManager.cpp.o -c /home/csraea/Desktop/coma/src/DirFileManager.cpp
-
-src/CMakeFiles/src.dir/DirFileManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/DirFileManager.cpp.i"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/src/DirFileManager.cpp > CMakeFiles/src.dir/DirFileManager.cpp.i
-
-src/CMakeFiles/src.dir/DirFileManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/DirFileManager.cpp.s"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/DirFileManager.cpp -o CMakeFiles/src.dir/DirFileManager.cpp.s
-
-src/CMakeFiles/src.dir/ExecutionController.cpp.o: src/CMakeFiles/src.dir/flags.make
-src/CMakeFiles/src.dir/ExecutionController.cpp.o: ../../src/ExecutionController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/src.dir/ExecutionController.cpp.o"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/ExecutionController.cpp.o -c /home/csraea/Desktop/coma/src/ExecutionController.cpp
-
-src/CMakeFiles/src.dir/ExecutionController.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/ExecutionController.cpp.i"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/src/ExecutionController.cpp > CMakeFiles/src.dir/ExecutionController.cpp.i
-
-src/CMakeFiles/src.dir/ExecutionController.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/ExecutionController.cpp.s"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/ExecutionController.cpp -o CMakeFiles/src.dir/ExecutionController.cpp.s
-
-src/CMakeFiles/src.dir/SecurityManager.cpp.o: src/CMakeFiles/src.dir/flags.make
-src/CMakeFiles/src.dir/SecurityManager.cpp.o: ../../src/SecurityManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/src.dir/SecurityManager.cpp.o"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/SecurityManager.cpp.o -c /home/csraea/Desktop/coma/src/SecurityManager.cpp
-
-src/CMakeFiles/src.dir/SecurityManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/SecurityManager.cpp.i"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/src/SecurityManager.cpp > CMakeFiles/src.dir/SecurityManager.cpp.i
-
-src/CMakeFiles/src.dir/SecurityManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/SecurityManager.cpp.s"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/SecurityManager.cpp -o CMakeFiles/src.dir/SecurityManager.cpp.s
-
-src/CMakeFiles/src.dir/compression/Huffman.cpp.o: src/CMakeFiles/src.dir/flags.make
-src/CMakeFiles/src.dir/compression/Huffman.cpp.o: ../../src/compression/Huffman.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/src.dir/compression/Huffman.cpp.o"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/compression/Huffman.cpp.o -c /home/csraea/Desktop/coma/src/compression/Huffman.cpp
-
-src/CMakeFiles/src.dir/compression/Huffman.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/compression/Huffman.cpp.i"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/src/compression/Huffman.cpp > CMakeFiles/src.dir/compression/Huffman.cpp.i
-
-src/CMakeFiles/src.dir/compression/Huffman.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/compression/Huffman.cpp.s"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/compression/Huffman.cpp -o CMakeFiles/src.dir/compression/Huffman.cpp.s
-
-src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.o: src/CMakeFiles/src.dir/flags.make
-src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.o: ../../src/compression/HuffmanNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.o"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/compression/HuffmanNode.cpp.o -c /home/csraea/Desktop/coma/src/compression/HuffmanNode.cpp
-
-src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/compression/HuffmanNode.cpp.i"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/src/compression/HuffmanNode.cpp > CMakeFiles/src.dir/compression/HuffmanNode.cpp.i
-
-src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/compression/HuffmanNode.cpp.s"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/compression/HuffmanNode.cpp -o CMakeFiles/src.dir/compression/HuffmanNode.cpp.s
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/korale/Desktop/c_tutorials/coma/src/CompressionManager.cpp -o CMakeFiles/src.dir/CompressionManager.cpp.s
 
 src/CMakeFiles/src.dir/main.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/src.dir/main.cpp.o"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/main.cpp.o -c /home/csraea/Desktop/coma/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/src.dir/main.cpp.o"
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/main.cpp.o -c /home/korale/Desktop/c_tutorials/coma/src/main.cpp
 
 src/CMakeFiles/src.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/main.cpp.i"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csraea/Desktop/coma/src/main.cpp > CMakeFiles/src.dir/main.cpp.i
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/korale/Desktop/c_tutorials/coma/src/main.cpp > CMakeFiles/src.dir/main.cpp.i
 
 src/CMakeFiles/src.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/main.cpp.s"
-	cd /home/csraea/Desktop/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csraea/Desktop/coma/src/main.cpp -o CMakeFiles/src.dir/main.cpp.s
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/korale/Desktop/c_tutorials/coma/src/main.cpp -o CMakeFiles/src.dir/main.cpp.s
 
 # Object files for target src
 src_OBJECTS = \
-"CMakeFiles/src.dir/ArgParser.cpp.o" \
 "CMakeFiles/src.dir/CompressionManager.cpp.o" \
-"CMakeFiles/src.dir/DirFileManager.cpp.o" \
-"CMakeFiles/src.dir/ExecutionController.cpp.o" \
-"CMakeFiles/src.dir/SecurityManager.cpp.o" \
-"CMakeFiles/src.dir/compression/Huffman.cpp.o" \
-"CMakeFiles/src.dir/compression/HuffmanNode.cpp.o" \
 "CMakeFiles/src.dir/main.cpp.o"
 
 # External object files for target src
 src_EXTERNAL_OBJECTS =
 
-src/libsrc.a: src/CMakeFiles/src.dir/ArgParser.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/CompressionManager.cpp.o
-src/libsrc.a: src/CMakeFiles/src.dir/DirFileManager.cpp.o
-src/libsrc.a: src/CMakeFiles/src.dir/ExecutionController.cpp.o
-src/libsrc.a: src/CMakeFiles/src.dir/SecurityManager.cpp.o
-src/libsrc.a: src/CMakeFiles/src.dir/compression/Huffman.cpp.o
-src/libsrc.a: src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/main.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/build.make
 src/libsrc.a: src/CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/csraea/Desktop/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libsrc.a"
-	cd /home/csraea/Desktop/coma/out/build/src && $(CMAKE_COMMAND) -P CMakeFiles/src.dir/cmake_clean_target.cmake
-	cd /home/csraea/Desktop/coma/out/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libsrc.a"
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && $(CMAKE_COMMAND) -P CMakeFiles/src.dir/cmake_clean_target.cmake
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/src.dir/build: src/libsrc.a
@@ -195,10 +105,10 @@ src/CMakeFiles/src.dir/build: src/libsrc.a
 .PHONY : src/CMakeFiles/src.dir/build
 
 src/CMakeFiles/src.dir/clean:
-	cd /home/csraea/Desktop/coma/out/build/src && $(CMAKE_COMMAND) -P CMakeFiles/src.dir/cmake_clean.cmake
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && $(CMAKE_COMMAND) -P CMakeFiles/src.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/src.dir/clean
 
 src/CMakeFiles/src.dir/depend:
-	cd /home/csraea/Desktop/coma/out/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/csraea/Desktop/coma /home/csraea/Desktop/coma/src /home/csraea/Desktop/coma/out/build /home/csraea/Desktop/coma/out/build/src /home/csraea/Desktop/coma/out/build/src/CMakeFiles/src.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/korale/Desktop/c_tutorials/coma /home/korale/Desktop/c_tutorials/coma/src /home/korale/Desktop/c_tutorials/coma/out/build /home/korale/Desktop/c_tutorials/coma/out/build/src /home/korale/Desktop/c_tutorials/coma/out/build/src/CMakeFiles/src.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/src.dir/depend
 

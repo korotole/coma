@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csraea/Desktop/coma
+CMAKE_SOURCE_DIR = /home/korale/Desktop/c_tutorials/coma
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csraea/Desktop/coma/out/build
+CMAKE_BINARY_DIR = /home/korale/Desktop/c_tutorials/coma/out/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/csraea/Desktop/coma/out/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/csraea/Desktop/coma/out/build/CMakeFiles /home/csraea/Desktop/coma/out/build/src/CMakeFiles/progress.marks
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csraea/Desktop/coma/out/build/CMakeFiles 0
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles /home/korale/Desktop/c_tutorials/coma/out/build/src/CMakeFiles/progress.marks
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/csraea/Desktop/coma/out/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/src.dir/rule:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/src.dir/rule
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/src.dir/rule
 .PHONY : src/CMakeFiles/src.dir/rule
 
 # Convenience name for target.
@@ -122,35 +122,8 @@ src: src/CMakeFiles/src.dir/rule
 
 # fast build rule for target.
 src/fast:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
 .PHONY : src/fast
-
-ArgParser.o: ArgParser.cpp.o
-
-.PHONY : ArgParser.o
-
-# target to build an object file
-ArgParser.cpp.o:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ArgParser.cpp.o
-.PHONY : ArgParser.cpp.o
-
-ArgParser.i: ArgParser.cpp.i
-
-.PHONY : ArgParser.i
-
-# target to preprocess a source file
-ArgParser.cpp.i:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ArgParser.cpp.i
-.PHONY : ArgParser.cpp.i
-
-ArgParser.s: ArgParser.cpp.s
-
-.PHONY : ArgParser.s
-
-# target to generate assembly for a file
-ArgParser.cpp.s:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ArgParser.cpp.s
-.PHONY : ArgParser.cpp.s
 
 CompressionManager.o: CompressionManager.cpp.o
 
@@ -158,7 +131,7 @@ CompressionManager.o: CompressionManager.cpp.o
 
 # target to build an object file
 CompressionManager.cpp.o:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/CompressionManager.cpp.o
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/CompressionManager.cpp.o
 .PHONY : CompressionManager.cpp.o
 
 CompressionManager.i: CompressionManager.cpp.i
@@ -167,7 +140,7 @@ CompressionManager.i: CompressionManager.cpp.i
 
 # target to preprocess a source file
 CompressionManager.cpp.i:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/CompressionManager.cpp.i
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/CompressionManager.cpp.i
 .PHONY : CompressionManager.cpp.i
 
 CompressionManager.s: CompressionManager.cpp.s
@@ -176,143 +149,8 @@ CompressionManager.s: CompressionManager.cpp.s
 
 # target to generate assembly for a file
 CompressionManager.cpp.s:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/CompressionManager.cpp.s
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/CompressionManager.cpp.s
 .PHONY : CompressionManager.cpp.s
-
-DirFileManager.o: DirFileManager.cpp.o
-
-.PHONY : DirFileManager.o
-
-# target to build an object file
-DirFileManager.cpp.o:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/DirFileManager.cpp.o
-.PHONY : DirFileManager.cpp.o
-
-DirFileManager.i: DirFileManager.cpp.i
-
-.PHONY : DirFileManager.i
-
-# target to preprocess a source file
-DirFileManager.cpp.i:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/DirFileManager.cpp.i
-.PHONY : DirFileManager.cpp.i
-
-DirFileManager.s: DirFileManager.cpp.s
-
-.PHONY : DirFileManager.s
-
-# target to generate assembly for a file
-DirFileManager.cpp.s:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/DirFileManager.cpp.s
-.PHONY : DirFileManager.cpp.s
-
-ExecutionController.o: ExecutionController.cpp.o
-
-.PHONY : ExecutionController.o
-
-# target to build an object file
-ExecutionController.cpp.o:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ExecutionController.cpp.o
-.PHONY : ExecutionController.cpp.o
-
-ExecutionController.i: ExecutionController.cpp.i
-
-.PHONY : ExecutionController.i
-
-# target to preprocess a source file
-ExecutionController.cpp.i:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ExecutionController.cpp.i
-.PHONY : ExecutionController.cpp.i
-
-ExecutionController.s: ExecutionController.cpp.s
-
-.PHONY : ExecutionController.s
-
-# target to generate assembly for a file
-ExecutionController.cpp.s:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ExecutionController.cpp.s
-.PHONY : ExecutionController.cpp.s
-
-SecurityManager.o: SecurityManager.cpp.o
-
-.PHONY : SecurityManager.o
-
-# target to build an object file
-SecurityManager.cpp.o:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/SecurityManager.cpp.o
-.PHONY : SecurityManager.cpp.o
-
-SecurityManager.i: SecurityManager.cpp.i
-
-.PHONY : SecurityManager.i
-
-# target to preprocess a source file
-SecurityManager.cpp.i:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/SecurityManager.cpp.i
-.PHONY : SecurityManager.cpp.i
-
-SecurityManager.s: SecurityManager.cpp.s
-
-.PHONY : SecurityManager.s
-
-# target to generate assembly for a file
-SecurityManager.cpp.s:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/SecurityManager.cpp.s
-.PHONY : SecurityManager.cpp.s
-
-compression/Huffman.o: compression/Huffman.cpp.o
-
-.PHONY : compression/Huffman.o
-
-# target to build an object file
-compression/Huffman.cpp.o:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/Huffman.cpp.o
-.PHONY : compression/Huffman.cpp.o
-
-compression/Huffman.i: compression/Huffman.cpp.i
-
-.PHONY : compression/Huffman.i
-
-# target to preprocess a source file
-compression/Huffman.cpp.i:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/Huffman.cpp.i
-.PHONY : compression/Huffman.cpp.i
-
-compression/Huffman.s: compression/Huffman.cpp.s
-
-.PHONY : compression/Huffman.s
-
-# target to generate assembly for a file
-compression/Huffman.cpp.s:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/Huffman.cpp.s
-.PHONY : compression/Huffman.cpp.s
-
-compression/HuffmanNode.o: compression/HuffmanNode.cpp.o
-
-.PHONY : compression/HuffmanNode.o
-
-# target to build an object file
-compression/HuffmanNode.cpp.o:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.o
-.PHONY : compression/HuffmanNode.cpp.o
-
-compression/HuffmanNode.i: compression/HuffmanNode.cpp.i
-
-.PHONY : compression/HuffmanNode.i
-
-# target to preprocess a source file
-compression/HuffmanNode.cpp.i:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.i
-.PHONY : compression/HuffmanNode.cpp.i
-
-compression/HuffmanNode.s: compression/HuffmanNode.cpp.s
-
-.PHONY : compression/HuffmanNode.s
-
-# target to generate assembly for a file
-compression/HuffmanNode.cpp.s:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/compression/HuffmanNode.cpp.s
-.PHONY : compression/HuffmanNode.cpp.s
 
 main.o: main.cpp.o
 
@@ -320,7 +158,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.o
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -329,7 +167,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.i
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -338,7 +176,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/csraea/Desktop/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.s
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -350,27 +188,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... src"
-	@echo "... ArgParser.o"
-	@echo "... ArgParser.i"
-	@echo "... ArgParser.s"
 	@echo "... CompressionManager.o"
 	@echo "... CompressionManager.i"
 	@echo "... CompressionManager.s"
-	@echo "... DirFileManager.o"
-	@echo "... DirFileManager.i"
-	@echo "... DirFileManager.s"
-	@echo "... ExecutionController.o"
-	@echo "... ExecutionController.i"
-	@echo "... ExecutionController.s"
-	@echo "... SecurityManager.o"
-	@echo "... SecurityManager.i"
-	@echo "... SecurityManager.s"
-	@echo "... compression/Huffman.o"
-	@echo "... compression/Huffman.i"
-	@echo "... compression/Huffman.s"
-	@echo "... compression/HuffmanNode.o"
-	@echo "... compression/HuffmanNode.i"
-	@echo "... compression/HuffmanNode.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -385,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/csraea/Desktop/coma/out/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,5 +1,11 @@
-COMA (version 0.0.1)
+COMA (version 0.0.2)
 =========================================================================================
+  * Added [COMA-5] Implement source code {1}
+          - changed the general idea of a project
+          - removed Huffman algorithm
+          - changed the structure of a project & removed useless files
+          - source code changes :D
+          - incremented version number
   * Added [COMA-2] Implement Huffman compression {3}
           - compilation warnings removed
           - implemented a new class HuffmanNode

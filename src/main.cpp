@@ -6,8 +6,8 @@ int main(int argc, char** argv) {
 
     std::cout << "Hello World!" << std::endl;
     
-    CompressionManager coma = CompressionManager(argv[1]);
-    coma.Compress();
+    CompressionManager coma = CompressionManager(argc, argv);
+    coma.DoWork();
 
     return 0;
 }
