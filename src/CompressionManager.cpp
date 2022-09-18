@@ -1,42 +1,41 @@
 #include "CompressionManager.h"
-#include "../conf/conf.h"
-#include "Common.h"
-
 
 uint8_t CompressionManager::Initialize() 
-{
+{   
+    int fd1 = open(opts.infile, O_RDONLY);
+    if(fd1 < 0)
+    {
+        PrintHelpMessage((char*)"Cannot open input file");
+        return 1;
+    }
+
+    int fd2 = open(opts.outfile, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+    if(fd2 < 0)
+    {
+        PrintHelpMessage((char*)"Cannot open output file");
+        return 1;
+    }
+
+    struct stat st;
+    if(fstat(fd1, &st) < 0)
+    {
+        PrintHelpMessage((char*)"Cannot stat input file");
+        return 1;
+    }
+
+    this->input = FileStream(fd1, st.st_size);
+    this->output = FileStream(fd2, 0);
+
+    opts.action = opts.mode ? &RLE<BUF_SIZE>::Compression : &RLE<BUF_SIZE>::Decompression;
+
     return 0;
 }
 
-off64_t CompressionManager::DoWork() {
-    char buf[BUFSIZ];
-    memset(buf, 0, sizeof(buf));
-    ssize_t ret = 0;
-
-    while ((ret = pread(params.fd1, buf, 
-                        (params.amount > BUFSIZ) ? BUFSIZ : params.amount, 
-                        params.fileOffset1)) != 0 && (params.amount - ret >= 0)) {
-        if (ret == -1) {
-            if (errno == EINTR) continue; // handling some frequent interruptions
-            return -1;
-        }
-        params.fileOffset1 += ret;
-
-        // TODO: compress data or decompress data with function pointer
-
-        if((ret = pwrite(params.fd2, buf, ret, params.fileOffset2)) != 0){
-            if (ret == -1) {
-                if (errno == EINTR) continue; // handling some frequent interruptions
-                return -1;
-            }
-        }
-
-        params.fileOffset2 += ret;
-        params.amount -= (int) ret;
-    }
-
-    return ret;
+size_t CompressionManager::DoWork() 
+{
+    return opts.action(input, output);
 }
+
 
 void CompressionManager::PrintHelpMessage(char* msg){
     if(msg != NULL) fprintf(stderr, "Error: %s, errno: %d\n", msg, errno);
@@ -84,7 +83,7 @@ bool CompressionManager::ParseOptions(int argc, char** argv) {
                 else if(strcmp(optarg, "d\0"))
                     opts.mode = 1;
                 else {
-                    PrintHelpMessage("Invalid mode");
+                    PrintHelpMessage((char*)"Invalid mode");
                     return false; }
                 break;
             case '?': case 'h':

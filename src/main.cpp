@@ -4,10 +4,8 @@
 
 int main(int argc, char** argv) {
 
-    std::cout << "Hello World!" << std::endl;
-    
     CompressionManager coma = CompressionManager(argc, argv);
-    coma.DoWork();
+    printf("result: %zu\n", coma.DoWork());
 
     return 0;
 }

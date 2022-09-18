@@ -152,6 +152,33 @@ CompressionManager.cpp.s:
 	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/CompressionManager.cpp.s
 .PHONY : CompressionManager.cpp.s
 
+FileStream.o: FileStream.cpp.o
+
+.PHONY : FileStream.o
+
+# target to build an object file
+FileStream.cpp.o:
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/FileStream.cpp.o
+.PHONY : FileStream.cpp.o
+
+FileStream.i: FileStream.cpp.i
+
+.PHONY : FileStream.i
+
+# target to preprocess a source file
+FileStream.cpp.i:
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/FileStream.cpp.i
+.PHONY : FileStream.cpp.i
+
+FileStream.s: FileStream.cpp.s
+
+.PHONY : FileStream.s
+
+# target to generate assembly for a file
+FileStream.cpp.s:
+	cd /home/korale/Desktop/c_tutorials/coma/out/build && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/FileStream.cpp.s
+.PHONY : FileStream.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -191,6 +218,9 @@ help:
 	@echo "... CompressionManager.o"
 	@echo "... CompressionManager.i"
 	@echo "... CompressionManager.s"
+	@echo "... FileStream.o"
+	@echo "... FileStream.i"
+	@echo "... FileStream.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

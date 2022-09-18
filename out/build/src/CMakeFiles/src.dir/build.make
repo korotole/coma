@@ -70,9 +70,22 @@ src/CMakeFiles/src.dir/CompressionManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/CompressionManager.cpp.s"
 	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/korale/Desktop/c_tutorials/coma/src/CompressionManager.cpp -o CMakeFiles/src.dir/CompressionManager.cpp.s
 
+src/CMakeFiles/src.dir/FileStream.cpp.o: src/CMakeFiles/src.dir/flags.make
+src/CMakeFiles/src.dir/FileStream.cpp.o: ../../src/FileStream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/src.dir/FileStream.cpp.o"
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/FileStream.cpp.o -c /home/korale/Desktop/c_tutorials/coma/src/FileStream.cpp
+
+src/CMakeFiles/src.dir/FileStream.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/FileStream.cpp.i"
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/korale/Desktop/c_tutorials/coma/src/FileStream.cpp > CMakeFiles/src.dir/FileStream.cpp.i
+
+src/CMakeFiles/src.dir/FileStream.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/FileStream.cpp.s"
+	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/korale/Desktop/c_tutorials/coma/src/FileStream.cpp -o CMakeFiles/src.dir/FileStream.cpp.s
+
 src/CMakeFiles/src.dir/main.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/src.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/src.dir/main.cpp.o"
 	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/main.cpp.o -c /home/korale/Desktop/c_tutorials/coma/src/main.cpp
 
 src/CMakeFiles/src.dir/main.cpp.i: cmake_force
@@ -86,16 +99,18 @@ src/CMakeFiles/src.dir/main.cpp.s: cmake_force
 # Object files for target src
 src_OBJECTS = \
 "CMakeFiles/src.dir/CompressionManager.cpp.o" \
+"CMakeFiles/src.dir/FileStream.cpp.o" \
 "CMakeFiles/src.dir/main.cpp.o"
 
 # External object files for target src
 src_EXTERNAL_OBJECTS =
 
 src/libsrc.a: src/CMakeFiles/src.dir/CompressionManager.cpp.o
+src/libsrc.a: src/CMakeFiles/src.dir/FileStream.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/main.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/build.make
 src/libsrc.a: src/CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libsrc.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libsrc.a"
 	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && $(CMAKE_COMMAND) -P CMakeFiles/src.dir/cmake_clean_target.cmake
 	cd /home/korale/Desktop/c_tutorials/coma/out/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 

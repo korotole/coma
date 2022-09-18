@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/korale/Desktop/c_tutorials/coma/conf -I/home/korale/Desktop/c_tutorials/coma/src -I/home/korale/Desktop/c_tutorials/coma/src/compression -I/home/korale/Desktop/c_tutorials/coma/src/encryption 
+CXX_INCLUDES = -I/home/korale/Desktop/c_tutorials/coma/conf -I/home/korale/Desktop/c_tutorials/coma/src -I/home/korale/Desktop/c_tutorials/coma/src/action 
 

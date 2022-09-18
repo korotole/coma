@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/src.dir/CompressionManager.cpp.o"
+  "CMakeFiles/src.dir/FileStream.cpp.o"
   "CMakeFiles/src.dir/main.cpp.o"
   "libsrc.a"
   "libsrc.pdb"

@@ -10,24 +10,24 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <getopt.h>
+#include <assert.h>
 
-typedef struct {
-    int32_t fd1;
-    int32_t fd2;
-    off64_t fileOffset1;
-    off64_t fileOffset2;
-    off64_t amount;
-} params_t;
+#include "FileStream.h"
+#include "../conf/conf.h"
+#include "Common.h"
+#include "action/RLE.h"
 
 class CompressionManager {
+
     private:
+        FileStream input;
+        FileStream output;
         struct Options {
             char infile[128]    = "\0";
             char outfile[128]   = "\0";
             uint8_t mode        = 0;
+            uint64_t (*action)(FileStream&, FileStream&);
         } opts;
-
-        params_t params = { 0 };
 
     public:
         CompressionManager(int argc, char** argv){ 
@@ -39,13 +39,11 @@ class CompressionManager {
             Initialize();
         };
 
-        ~CompressionManager(){ };
+        ~CompressionManager() { };
 
-        off64_t DoWork();
+        size_t DoWork();
 
     private:
-        int32_t Compress();
-        int32_t Decompress();
 
         uint8_t Initialize();
 

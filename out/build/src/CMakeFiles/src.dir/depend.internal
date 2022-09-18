@@ -6,6 +6,19 @@ src/CMakeFiles/src.dir/CompressionManager.cpp.o
  /home/korale/Desktop/c_tutorials/coma/src/Common.h
  /home/korale/Desktop/c_tutorials/coma/src/CompressionManager.cpp
  /home/korale/Desktop/c_tutorials/coma/src/CompressionManager.h
-src/CMakeFiles/src.dir/main.cpp.o
+ /home/korale/Desktop/c_tutorials/coma/src/FileStream.h
+ /home/korale/Desktop/c_tutorials/coma/src/action/RLE.h
+src/CMakeFiles/src.dir/FileStream.cpp.o
+ /home/korale/Desktop/c_tutorials/coma/conf/conf.h
+ /home/korale/Desktop/c_tutorials/coma/src/Common.h
  /home/korale/Desktop/c_tutorials/coma/src/CompressionManager.h
+ /home/korale/Desktop/c_tutorials/coma/src/FileStream.cpp
+ /home/korale/Desktop/c_tutorials/coma/src/FileStream.h
+ /home/korale/Desktop/c_tutorials/coma/src/action/RLE.h
+src/CMakeFiles/src.dir/main.cpp.o
+ /home/korale/Desktop/c_tutorials/coma/conf/conf.h
+ /home/korale/Desktop/c_tutorials/coma/src/Common.h
+ /home/korale/Desktop/c_tutorials/coma/src/CompressionManager.h
+ /home/korale/Desktop/c_tutorials/coma/src/FileStream.h
+ /home/korale/Desktop/c_tutorials/coma/src/action/RLE.h
  /home/korale/Desktop/c_tutorials/coma/src/main.cpp

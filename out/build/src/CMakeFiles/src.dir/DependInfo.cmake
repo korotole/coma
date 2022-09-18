@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/korale/Desktop/c_tutorials/coma/src/CompressionManager.cpp" "/home/korale/Desktop/c_tutorials/coma/out/build/src/CMakeFiles/src.dir/CompressionManager.cpp.o"
+  "/home/korale/Desktop/c_tutorials/coma/src/FileStream.cpp" "/home/korale/Desktop/c_tutorials/coma/out/build/src/CMakeFiles/src.dir/FileStream.cpp.o"
   "/home/korale/Desktop/c_tutorials/coma/src/main.cpp" "/home/korale/Desktop/c_tutorials/coma/out/build/src/CMakeFiles/src.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

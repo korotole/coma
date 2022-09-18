@@ -5,7 +5,20 @@ src/CMakeFiles/src.dir/CompressionManager.cpp.o: ../../conf/conf.h
 src/CMakeFiles/src.dir/CompressionManager.cpp.o: ../../src/Common.h
 src/CMakeFiles/src.dir/CompressionManager.cpp.o: ../../src/CompressionManager.cpp
 src/CMakeFiles/src.dir/CompressionManager.cpp.o: ../../src/CompressionManager.h
+src/CMakeFiles/src.dir/CompressionManager.cpp.o: ../../src/FileStream.h
+src/CMakeFiles/src.dir/CompressionManager.cpp.o: ../../src/action/RLE.h
 
+src/CMakeFiles/src.dir/FileStream.cpp.o: ../../conf/conf.h
+src/CMakeFiles/src.dir/FileStream.cpp.o: ../../src/Common.h
+src/CMakeFiles/src.dir/FileStream.cpp.o: ../../src/CompressionManager.h
+src/CMakeFiles/src.dir/FileStream.cpp.o: ../../src/FileStream.cpp
+src/CMakeFiles/src.dir/FileStream.cpp.o: ../../src/FileStream.h
+src/CMakeFiles/src.dir/FileStream.cpp.o: ../../src/action/RLE.h
+
+src/CMakeFiles/src.dir/main.cpp.o: ../../conf/conf.h
+src/CMakeFiles/src.dir/main.cpp.o: ../../src/Common.h
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/CompressionManager.h
+src/CMakeFiles/src.dir/main.cpp.o: ../../src/FileStream.h
+src/CMakeFiles/src.dir/main.cpp.o: ../../src/action/RLE.h
 src/CMakeFiles/src.dir/main.cpp.o: ../../src/main.cpp
 

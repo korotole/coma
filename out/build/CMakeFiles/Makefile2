@@ -99,7 +99,7 @@ CMakeFiles/coma.dir/all: src/CMakeFiles/src.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/coma.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/coma.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles 0
 .PHONY : CMakeFiles/coma.dir/rule
@@ -121,12 +121,12 @@ CMakeFiles/coma.dir/clean:
 src/CMakeFiles/src.dir/all:
 	$(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/depend
 	$(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles --progress-num=3,4,5 "Built target src"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles --progress-num=3,4,5,6 "Built target src"
 .PHONY : src/CMakeFiles/src.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/src.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/src.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/src.dir/rule
