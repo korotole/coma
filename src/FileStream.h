@@ -8,7 +8,7 @@ class FileStream
 {
   private:
     int fd;
-    int64_t fileOffset = 0;
+    off_t fileOffset = 0;
   
   public:
     size_t size;

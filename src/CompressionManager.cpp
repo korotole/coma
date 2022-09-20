@@ -23,22 +23,22 @@ uint8_t CompressionManager::Initialize()
         return 1;
     }
 
-    this->input = FileStream(fd1, st.st_size);
-    this->output = FileStream(fd2, 0);
+    this->input = new FileStream(fd1, st.st_size);
+    this->output = new FileStream(fd2, 0);
 
     opts.action = opts.mode ? &RLE<BUF_SIZE>::Compression : &RLE<BUF_SIZE>::Decompression;
 
     return 0;
 }
 
-size_t CompressionManager::DoWork() 
+ssize_t CompressionManager::DoWork() 
 {
     return opts.action(input, output);
 }
 
 
 void CompressionManager::PrintHelpMessage(char* msg){
-    if(msg != NULL) fprintf(stderr, "Error: %s, errno: %d\n", msg, errno);
+    if(msg != NULL) fprintf(stderr, "Error: %s, errno: %d (%s)\n", msg, errno, strerror(errno));
     else {
         printf("\033[1m" "--- COMA ---\n" "\033[22m");
         printf("COmpression MAnager: an utility to (de)compress a file with specified parameters\n");
@@ -72,10 +72,10 @@ bool CompressionManager::ParseOptions(int argc, char** argv) {
         switch (c)
         {
             case 'i':
-                strcpy(opts.infile, optarg);
+                strcat(opts.infile, optarg);
                 break;
             case 'o':
-                strcpy(opts.outfile, optarg);
+                strcat(opts.outfile, optarg);
                 break;
             case 'm':
                 if(strcmp(optarg, "c\0"))
@@ -84,7 +84,8 @@ bool CompressionManager::ParseOptions(int argc, char** argv) {
                     opts.mode = 1;
                 else {
                     PrintHelpMessage((char*)"Invalid mode");
-                    return false; }
+                    return false; 
+                    }
                 break;
             case '?': case 'h':
             default:

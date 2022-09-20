@@ -20,13 +20,13 @@
 class CompressionManager {
 
     private:
-        FileStream input;
-        FileStream output;
+        FileStream *input;
+        FileStream *output;
         struct Options {
-            char infile[128]    = "\0";
-            char outfile[128]   = "\0";
+            char infile[128]    = FILE_PREFIX;
+            char outfile[128]   = FILE_PREFIX;
             uint8_t mode        = 0;
-            uint64_t (*action)(FileStream&, FileStream&);
+            ssize_t (*action)(FileStream*, FileStream*);
         } opts;
 
     public:
@@ -39,9 +39,12 @@ class CompressionManager {
             Initialize();
         };
 
-        ~CompressionManager() { };
+        ~CompressionManager(){ 
+            delete input;
+            delete output;
+        };
 
-        size_t DoWork();
+        ssize_t DoWork();
 
     private:
 

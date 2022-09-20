@@ -49,6 +49,8 @@ FileStream.h
 /home/korale/Desktop/c_tutorials/coma/src/FileStream.h
 CompressionManager.h
 /home/korale/Desktop/c_tutorials/coma/src/CompressionManager.h
+iostream
+-
 
 /home/korale/Desktop/c_tutorials/coma/src/FileStream.h
 stdint.h

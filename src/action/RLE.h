@@ -19,8 +19,8 @@ template <size_t BufferSize=BUF_SIZE>
 class RLE
 {
   public:
-    FileStream &source;
-    FileStream &destination;
+    FileStream *source;
+    FileStream *destination;
 
     static constexpr auto Max6bNumber = 0x3F;
     static constexpr auto Max5bNumber = 0x1F;
@@ -38,25 +38,23 @@ class RLE
     static constexpr auto MinimalLengthToInterrupt = 5;
 
   public:
-    constexpr RLE(FileStream &source, FileStream &destination)
+    constexpr RLE(FileStream* source, FileStream* destination)
         : source(source), destination(destination)
     {
     }
 
-    size_t Compress() const
+    ssize_t Compress() const
     {
         auto buffer = std::make_unique<uint8_t[]>(BufferSize);
-        size_t total_length = 0;
+        ssize_t total_length = 0;
 
-        while (total_length < source.size)
+        while (total_length < source->size)
         {
-            ssize_t read = source.Read(buffer.get(), BufferSize);
+            ssize_t read = source->Read(buffer.get(), BufferSize);
             if (read == 0)
             {
                 break;
             }
-
-            //printf("%ld, %d\n", read, errno);
 
             compress_buffer(buffer.get(), read);
             total_length += read;
@@ -65,15 +63,15 @@ class RLE
         return total_length;
     }
 
-    size_t Decompress()
+    ssize_t Decompress()
     {
         auto buffer = std::make_unique<uint8_t[]>(BufferSize);
-        size_t total_length = 0;
+        ssize_t total_length = 0;
 
-        while (1)
+        while (total_length < source->size)
         {
-            printf("d\n");
-            int read = source.Read(buffer.get(), BufferSize);
+            int read = source->Read(buffer.get(), BufferSize);
+
             if (read == 0)
             {
                 break;
@@ -86,12 +84,12 @@ class RLE
         return total_length;
     }
 
-    static size_t Compression(FileStream &src, FileStream &dest)
+    static ssize_t Compression(FileStream *src, FileStream *dest)
     {
         return RLE(src, dest).Compress();
     }
 
-    static size_t Decompression(FileStream &src, FileStream &dest)
+    static ssize_t Decompression(FileStream *src, FileStream *dest)
     {
         return RLE(src, dest).Decompress();
     }
@@ -138,7 +136,7 @@ class RLE
         {
             data[0] = (CompressedFlag | SingleByteLengthFlag | (uint8_t)(length & Max6bNumber));
             data[1] = byte;
-            destination.Write(data, 2);
+            destination->Write(data, 2);
             return;
         }
 
@@ -148,12 +146,12 @@ class RLE
         if (byte == 0)
         {
             data[0] |= ZeroByteData;
-            destination.Write(data, 2);
+            destination->Write(data, 2);
             return;
         }
 
         data[2] = byte;
-        destination.Write(data, 3);
+        destination->Write(data, 3);
     }
 
     void write_non_repeat_buffer(const uint8_t *buffer, int data_length) const
@@ -164,7 +162,7 @@ class RLE
         {
             data[0] = (NotCompressedFlag | SingleByteLengthFlag |
                        (uint8_t)(written_length & Max6bNumber));
-            destination.Write(data, 1);
+            destination->Write(data, 1);
         }
         else
         {
@@ -172,10 +170,10 @@ class RLE
             data[0] = (NotCompressedFlag | TwoByteLengthFlag |
                        (uint8_t)((written_length >> 8) & Max6bNumber));
             data[1] = (uint8_t)(written_length);
-            destination.Write(data, 2);
+            destination->Write(data, 2);
         }
 
-        destination.Write(buffer, data_length);
+        destination->Write(buffer, data_length);
     }
 
     int write_non_repeat(const uint8_t *buffer, int size) const
@@ -346,7 +344,7 @@ class RLE
             {
                 int currentWrite = SingleDecompression.rawBytesToBeWritten <= size ? SingleDecompression.rawBytesToBeWritten : size;
 
-                destination.Write(buffer, currentWrite);
+                destination->Write(buffer, currentWrite);
 
                 buffer += currentWrite;
                 size -= currentWrite;
@@ -391,7 +389,7 @@ class RLE
                 return;
             }
 
-            destination.Write(SingleDecompression.buf, (int) SingleDecompression.length - SingleDecompression.rawBytesToBeWritten);
+            destination->Write(SingleDecompression.buf, (int) SingleDecompression.length - SingleDecompression.rawBytesToBeWritten);
 
             free(SingleDecompression.buf);
 
