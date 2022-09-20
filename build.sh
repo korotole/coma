@@ -6,9 +6,6 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-rm -rf ./out/build/
-mkdir --mode=0777 ./out/build/
-
 if [[ ${1} == "-r" ]]; then
     echo -e "Removing old files..."
     rm -rf ./out/

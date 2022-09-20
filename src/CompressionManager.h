@@ -14,14 +14,13 @@
 
 #include "FileStream.h"
 #include "../conf/conf.h"
-#include "Common.h"
 #include "action/RLE.h"
 
 class CompressionManager {
 
     private:
-        FileStream *input;
-        FileStream *output;
+        FileStream *input = nullptr;
+        FileStream *output = nullptr;
         struct Options {
             char infile[128]    = FILE_PREFIX;
             char outfile[128]   = FILE_PREFIX;
@@ -31,17 +30,15 @@ class CompressionManager {
 
     public:
         CompressionManager(int argc, char** argv){ 
-            if(!ParseOptions(argc, argv))
+            if(!ParseOptions(argc, argv) || Initialize() < 0)
             {
                 exit(EXIT_FAILURE);
             }
-
-            Initialize();
         };
 
         ~CompressionManager(){ 
-            delete input;
-            delete output;
+            if(input != nullptr) delete input;
+            if(output != nullptr) delete output;
         };
 
         ssize_t DoWork();

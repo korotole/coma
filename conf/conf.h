@@ -1,7 +1,7 @@
 #ifndef CONF_H
 #define CONF_H
 
-#pragma G++ diagnostic ignored "-Wredefined"
+// #pragma G++ diagnostic ignored "-Wredefined"
 
 // #define _LARGEFILE64_SOURCE
 // #define _FILE_OFFSET_BITS 64
