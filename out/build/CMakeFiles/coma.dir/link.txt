@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/coma.dir/src/main.cpp.o  -o coma   -L/home/korale/Desktop/c_tutorials/coma/conf  -L/home/korale/Desktop/c_tutorials/coma/src  -L/home/korale/Desktop/c_tutorials/coma/src/action  -Wl,-rpath,/home/korale/Desktop/c_tutorials/coma/conf:/home/korale/Desktop/c_tutorials/coma/src:/home/korale/Desktop/c_tutorials/coma/src/action src/libsrc.a 

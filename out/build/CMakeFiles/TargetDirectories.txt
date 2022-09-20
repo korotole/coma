@@ -1,6 +1,0 @@
-/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles/rebuild_cache.dir
-/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles/edit_cache.dir
-/home/korale/Desktop/c_tutorials/coma/out/build/CMakeFiles/coma.dir
-/home/korale/Desktop/c_tutorials/coma/out/build/src/CMakeFiles/rebuild_cache.dir
-/home/korale/Desktop/c_tutorials/coma/out/build/src/CMakeFiles/edit_cache.dir
-/home/korale/Desktop/c_tutorials/coma/out/build/src/CMakeFiles/src.dir
