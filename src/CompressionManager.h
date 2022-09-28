@@ -30,7 +30,7 @@ class CompressionManager {
 
     public:
         CompressionManager(int argc, char** argv){ 
-            if(!ParseOptions(argc, argv) || Initialize() < 0)
+            if(!ParseOptions(argc, argv) || Initialize() > 0)
             {
                 exit(EXIT_FAILURE);
             }
