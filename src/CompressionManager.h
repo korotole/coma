@@ -44,7 +44,6 @@ class CompressionManager {
         ssize_t DoWork();
 
     private:
-
         uint8_t Initialize();
 
         void PrintHelpMessage(char* msg=NULL);
